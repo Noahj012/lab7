@@ -4,6 +4,11 @@ public class StackHospital<PatientType> extends Hospital<PatientType>
 {
 	private Stack<PatientType> stackHospital = new Stack<>();
 	private int counter = 0;
+	
+	public StackHospital()
+	{
+		this.stackHospital = new Stack<>();
+	}
 
 	@Override
 	public void addPatient(PatientType patient) 
@@ -52,10 +57,14 @@ public class StackHospital<PatientType> extends Hospital<PatientType>
 	@Override
 	public String allPatientInfo() 
 	{
-		//String allInfo = "";
+		String allInfo = "";
 		
-		//for (int i = 0; )
-		return stackHospital.toString();
+		for (int i = 0; i < stackHospital.size(); ++i)
+		{
+			allInfo += stackHospital.get(i).toString();
+		}
+		//return stackHospital.toString();
+		return allInfo;
 	}
 
 }
