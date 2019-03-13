@@ -63,6 +63,7 @@ public class HospitalTypeTest
 		Assert.assertEquals("Not the correct Patient","Andy In for Scared", pQHos.allPatientInfo());
 		Assert.assertEquals("Not the correct Patient",b, pQHos.treatNextPatient());
 		Assert.assertEquals("Not the correct Patient",0, pQHos.numPatients());
+		
 	}
 
 }
